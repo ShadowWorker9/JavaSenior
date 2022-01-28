@@ -37,12 +37,15 @@ public class CollectionTest {
         //5.isEmpty;
         System.out.println(coll.isEmpty());
 
-        coll.add(new Person("Jerry",20));
+
         //6.contains();
         System.out.println(coll.contains(123));
 
         coll.add(new String("Tom"));
         System.out.println(coll.contains(new String("Tom")));
+
+        coll.add(new Person("Jerry",20));
+        System.out.println(coll.contains(new Person("Jerry",20)));
 
 
     }
