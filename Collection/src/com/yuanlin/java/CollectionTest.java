@@ -3,6 +3,7 @@ package com.yuanlin.java;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
 
@@ -47,6 +48,9 @@ public class CollectionTest {
         coll.add(new Person("Jerry",20));
         System.out.println(coll.contains(new Person("Jerry",20)));
 
+        //7.containsAll();
+        Collection coll2 = Arrays.asList(123,456);
+        System.out.println(coll.containsAll(coll2));
 
     }
 
