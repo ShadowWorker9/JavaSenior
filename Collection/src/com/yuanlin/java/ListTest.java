@@ -1,5 +1,11 @@
 package com.yuanlin.java;
 
+import org.junit.Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * 1. List接口框架
  *
@@ -60,6 +66,85 @@ package com.yuanlin.java;
  * @author yuanlin
  * @time 2022-01-29-3:18 PM
  */
+
+
+
+
+ /*
+void add(int index, Object ele):在index位置插入ele元素
+boolean addAll(int index, Collection eles):从index位置开始将eles中的所有元素添加进来
+Object get(int index):获取指定index位置的元素
+int indexOf(Object obj):返回obj在集合中首次出现的位置
+int lastIndexOf(Object obj):返回obj在当前集合中末次出现的位置
+Object remove(int index):移除指定index位置的元素，并返回此元素
+Object set(int index, Object ele):设置指定index位置的元素为ele
+List subList(int fromIndex, int toIndex):返回从fromIndex到toIndex位置的子集合
+
+总结：常用方法
+增：add(Object obj)
+删：remove(int index) / remove(Object obj)
+改：set(int index, Object ele)
+查：get(int index)
+插：add(int index, Object ele)
+长度：size()
+遍历：① Iterator迭代器方式
+     ② 增强for循环
+     ③ 普通的循环
+
+     */
 public class ListTest {
+    @Test
+    public void test2(){
+        ArrayList list = new ArrayList();
+        list.add(123);
+        list.add(456);
+        list.add("AA");
+        list.add(new Person("junpei",22));
+        list.add(456);
+
+        //4.index();输出所在位置
+        int index = list.indexOf(456);
+        System.out.println(index);
+
+        //5.lastIndexOf();输出最后一次出现的位置
+        System.out.println(list.lastIndexOf(456));
+
+        //6.remove();移除某位置的元素
+        list.remove(0);
+        System.out.println(list);
+
+        //7.set();设置指定位置的元素为
+        list.set(0,"CC");
+        System.out.println(list);
+
+        //8.subList();返回子串
+        List list2 = list.subList(2, 4);
+        System.out.println(list2);
+    }
+
+    @Test
+    public void test1(){
+        ArrayList list = new ArrayList();
+        list.add(123);
+        list.add(456);
+        list.add("AA");
+        list.add(new Person("junpei",22));
+        list.add(456);
+
+        System.out.println(list);
+
+        //1.add();在某位置添加元素
+        list.add(1,"BB");
+        System.out.println(list);
+
+        //2.addAll();将集合添加到某集合
+        List list1 = Arrays.asList(1, 2, 3);
+        list.addAll(list1);
+        System.out.println(list.size());
+
+        //3.get(index)返回某位置的元素角标
+        System.out.println(list.get(0));
+
+    }
 
 }

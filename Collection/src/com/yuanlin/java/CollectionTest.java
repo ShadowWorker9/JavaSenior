@@ -40,16 +40,16 @@ public class CollectionTest {
 
     @Test
     public void test1(){
-        //1.add();
+        //1.add();添加元素
         Collection coll = new ArrayList();
         coll.add(123);
         coll.add("AA");
         coll.add(new Date());
 
-        //2.size();
+        //2.size();查看大小
         System.out.println(coll.size());
 
-        //3.addAll();
+        //3.addAll();将一个集合添加到另一个集合
         Collection  coll1 = new ArrayList();
         coll1.add(456);
         coll.addAll(coll1);
@@ -57,14 +57,14 @@ public class CollectionTest {
         System.out.println(coll.size());
         System.out.println(coll);
 
-        //4.clear();
+        //4.clear();删除所有元素
 //        coll.clear();
 
-        //5.isEmpty;
+        //5.isEmpty;判断是否为空
         System.out.println(coll.isEmpty());
 
 
-        //6.contains();
+        //6.contains();判断是否包含元素
         System.out.println(coll.contains(123));
 
         coll.add(new String("Tom"));
@@ -73,15 +73,15 @@ public class CollectionTest {
         coll.add(new Person("Jerry",20));
         System.out.println(coll.contains(new Person("Jerry",20)));
 
-        //7.containsAll();
+        //7.containsAll();判断是否包含集合的所有元素
         Collection coll2 = Arrays.asList(123,456);
         System.out.println(coll.containsAll(coll2));
 
-        //8.remove();
+        //8.remove();移除元素
         System.out.println(coll.remove(123));
         System.out.println(coll);
 
-        //9.removeAll();
+        //9.removeAll();移除集合的所有元素
         System.out.println(coll.removeAll(coll2));
         System.out.println(coll);
 
@@ -91,7 +91,7 @@ public class CollectionTest {
         System.out.println(coll);
     }
     @Test
-    //11.equals
+    //11.equals判断集合是否相等
     public void test2(){
         Collection coll4 = new ArrayList();
         coll4.add(123);
